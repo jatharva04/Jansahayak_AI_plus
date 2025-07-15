@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Report Issue | JanSahayak AI+</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    body {
+       background: linear-gradient(
+    45deg,
+    #800020 0%,     /* Deep Burgundy */
+    #990033 10%,     /* Warmer Burgundy */
+    #FAD6A5 100%     /* Soft Champagne */
+  );
+      min-height: 100vh;
+    }
+
+    .form-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      margin-top: 5rem;
+    }
+
+    .form-label {
+      font-weight: 600;
+    }
+
+    .btn-danger {
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      border: none;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-danger:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255, 65, 108, 0.4);
+    }
+
+    .form-header i {
+      color: #ff416c;
+    }
+
+    .form-control, .form-select {
+      border-radius: 0.75rem;
+      padding: 0.75rem 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="form-card">
+          <div class="form-header text-center mb-4">
+            <h2 class="fw-bold">
+              <i class="fas fa-pen-alt me-2"></i>
+              Report a Civic Issue
+            </h2>
+            <p class="text-muted">Help us identify issues in your area. Our AI will auto-categorize your complaint.</p>
+          </div>
+
+          <form action="/submit" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">👤 Name</label>
+              <input type="text" name="name" required class="form-control" placeholder="Enter your full name">
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">📧 Email</label>
+              <input type="email" name="email" required class="form-control" placeholder="you@example.com">
+            </div>
+
+            <div class="mb-3">
+              <label for="location" class="form-label">📍 Location</label>
+              <select name="location" class="form-select" required>
+                <option value="" disabled selected>Select your area</option>
+                <option value="Panvel">Panvel</option>
+                <option value="Kamothe">Kamothe</option>
+                <option value="Kalamboli">Kalamboli</option>
+                <option value="Kharghar">Kharghar</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label for="complaint" class="form-label">📝 Complaint</label>
+              <textarea name="complaint" rows="4" required class="form-control" placeholder="Describe the issue in detail..."></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-danger w-100">
+                <i class="fas fa-paper-plane me-2"></i> Submit Complaint
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

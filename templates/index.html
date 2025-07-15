@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome | JanSahayak AI+</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">JanSahayak AI+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="d-flex align-items-center justify-content-center">
+        <div class="bg-overlay p-5">
+            <h1 class="fw-bold">Welcome to JanSahayak AI+</h1>
+            <p class="lead">Your AI-powered assistant for civic, health, and financial empowerment</p>
+            <a href="#services" class="btn btn-outline-primary btn-lg mt-3 rounded-pill">Explore Services</a>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="services-title">🚀 Our AI Modules</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card fade-in">
+                        <div class="text-center">
+                            <span class="service-icon">📝</span>
+                            <h5 class="fw-bold mb-3">Report Civic Issue</h5>
+                            <p class="text-muted">Report local issues and track their resolution with AI-powered categorization.</p>
+                        </div>
+                        <a href="/report-issue" class="service-btn btn-danger">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card fade-in">
+                        <div class="text-center">
+                            <span class="service-icon">💰</span>
+                            <h5 class="fw-bold mb-3">Monthly Budget &amp; Goal Planner</h5>
+                            <p class="text-muted">Get an instant AI-generated budget plan and savings roadmap.</p>
+                        </div>
+                        <a href="/budget" class="service-btn btn-warning">Check Now</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card fade-in">
+                        <div class="text-center">
+                            <span class="service-icon">⚖️</span>
+                            <h5 class="fw-bold mb-3">LegalEase AI</h5>
+                            <p class="text-muted">Get legal guidance and document assistance through AI-powered chat.</p>
+                        </div>
+                        <a href="/legal-chat" class="service-btn btn-primary">Chat Now</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card fade-in">
+                        <div class="text-center">
+                            <span class="service-icon">🛠️</span>
+                            <h5 class="fw-bold mb-3">Volunteers Dashboard</h5>
+                            <p class="text-muted">Comprehensive Volunteers panel for the community to help each other.</p>
+                        </div>
+                        <a href="/admin" class="service-btn btn-dark">Access Panel</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card fade-in">
+                        <div class="text-center">
+                            <span class="service-icon">🧠</span>
+                            <h5 class="fw-bold mb-3">NLP Disease Predictor</h5>
+                            <p class="text-muted">AI-powered health risk assessment using natural language processing.</p>
+                        </div>
+                        <a href="/disease-predictor" class="service-btn btn-info">Predict Health</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 text-center">
+        <div class="container">
+            <h3 class="mb-3 fw-bold">About JanSahayak AI+</h3>
+            <p class="lead">
+                JanSahayak AI+ is your one-stop platform for reporting local issues, predicting health risks, evaluating financial health, and empowering citizens with legal insights using the power of machine learning and natural language processing.
+            </p>
+        </div>
+    </section>
+
+    <footer class="text-white">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">JanSahayak AI+</h5>
+                    <p class="small">An AI-powered citizen platform for civic issue reporting, health risk prediction, and financial insights.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#home" class="text-decoration-none">Home</a></li>
+                        <li><a href="#services" class="text-decoration-none">Services</a></li>
+                        <li><a href="#about" class="text-decoration-none">About</a></li>
+                        <li><a href="#contact" class="text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="fw-bold">Contact</h6>
+                    <p class="small mb-1">📍New Panvel, Maharashtra, India</p>
+                    <p class="small mb-1">📧Atharva J</p>
+                    <p class="small">© 2025 JanSahayak AI+ | Built with ❤️ by Atharva J</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

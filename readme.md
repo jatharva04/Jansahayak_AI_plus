@@ -1,4 +1,4 @@
-# 🇮🇳 JanSahayak AI+
+#  JanSahayak AI+
 
 **JanSahayak AI+** is an AI-powered citizen assistance platform that empowers Indian citizens to get intelligent support in reporting civic issues, predicting health risks, understanding legal documents, planning finances, and managing reports — all through a modular, Flask-based system.
 
